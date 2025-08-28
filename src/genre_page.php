@@ -31,7 +31,7 @@ $genre_id = $mysqli->get_genre_id($genre_full);
 $amt_per_page = 30;
 $count = $mysqli->genre_show_count($genre_id);
 
-if ($count <= 1) {
+if ($count <= $amt_per_page) {
     $page = 1;
     $num_pages = 1;
 } else {

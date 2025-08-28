@@ -39,7 +39,7 @@ $avg = $_SESSION[$in_id . "_avg"] ?? $mysqli->get_show_column($in_id, "review_av
 $avg = number_format($avg, 1);
 
 $review_count = $mysqli->review_count($in_id);
-if ($review_count <= 1) {
+if ($review_count <= $amt_per_page) {
     $page = 1;
     $num_pages = 1;
 } else {

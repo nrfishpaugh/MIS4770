@@ -21,7 +21,7 @@ $amt_per_page = 12;
 $user_info = $mysqli->user_info($in_id);
 
 $review_count = $mysqli->user_review_count($in_id);
-if ($review_count <= 1) {
+if ($review_count <= $amt_per_page) {
     $page = 1;
     $num_pages = 1;
 } else {

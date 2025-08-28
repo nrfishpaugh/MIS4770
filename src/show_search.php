@@ -18,7 +18,7 @@ $img_url = 'https://image.tmdb.org/t/p/original';
 $amt_per_page = 30;
 $count = $mysqli->search_count($searchstr);
 
-if ($count <= 1) {
+if ($count <= $amt_per_page) {
     $page = 1;
     $num_pages = 1;
 } else {
